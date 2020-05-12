@@ -1,0 +1,26 @@
+/* element selectors */
+
+
+nav ul{
+    list-style: none;
+}
+nav ul li:first-child{
+    display: block;
+}
+
+nav ul li{
+    display: none;
+}
+
+nav ul li a{
+    border: 1px solid black;
+    display: block;
+    background-color: aqua;
+    text-decoration: none;
+}
+
+/* class selectors */
+
+.show li{
+    display: block;
+}
