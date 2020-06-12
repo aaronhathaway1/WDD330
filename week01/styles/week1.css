@@ -1,24 +1,79 @@
 /* element selectors */
 
+a:visited{
+    color:black;
+}
+
+header{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(255, 221, 30);
+    grid-row: -5 / -4;
+}
+
+html{
+    width: 100%;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(139, 60, 158);
+    border: 1px solid black;
+
+    padding: 15px;
+    
+    grid-row: -2 / -1;
+}
+
+main{
+    margin: 5px;
+    grid-row: -3 / -2;
+}
+
+nav{
+    max-width: 100%;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    grid-row: -4 / -3;
+}
 
 nav ul{
     list-style: none;
 }
+
 nav ul li:first-child{
     display: block;
 }
 
 nav ul li{
     display: none;
+    text-align: center;
+    
 }
 
 nav ul li a{
     border: 1px solid black;
     display: block;
-    background-color: aqua;
+    background-color: rgb(139, 60, 158);
     text-decoration: none;
+    height: 40px;
+    padding-top: 20px;
+    font-size: 1.2rem;
 }
 
+ul{
+    padding: 0;
+    margin: 0;
+}
 /* class selectors */
 
 .show li{
