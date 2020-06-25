@@ -1,21 +1,26 @@
 /* element selectors */
 
-a:visited{
-    color:black;
+a:visited {
+    color: black;
 }
 
-header{
+a{
+    color:black;
+    text-decoration: none;
+}
+
+header {
     text-align: center;
     padding: 10px;
     background-color: rgb(255, 221, 30);
     grid-row: -5 / -4;
 }
 
-html{
+html {
     width: 100%;
 }
 
-body{
+body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -23,22 +28,22 @@ body{
     grid-template-rows: auto;
 }
 
-footer{
+footer {
     text-align: center;
     background-color: rgb(139, 60, 158);
     border: 1px solid black;
 
     padding: 15px;
-    
+
     grid-row: -2 / -1;
 }
 
-main{
+main {
     margin: 5px;
     grid-row: -3 / -2;
 }
 
-nav{
+nav {
     max-width: 100%;
     align-self: center;
     padding: 0;
@@ -46,21 +51,21 @@ nav{
     grid-row: -4 / -3;
 }
 
-nav ul{
+nav ul {
     list-style: none;
 }
 
-nav ul li:first-child{
+nav ul li:first-child {
     display: block;
 }
 
-nav ul li{
+nav ul li {
     display: none;
     text-align: center;
-    
+
 }
 
-nav ul li a{
+nav ul li a {
     border: 1px solid black;
     display: block;
     background-color: rgb(139, 60, 158);
@@ -70,12 +75,72 @@ nav ul li a{
     font-size: 1.2rem;
 }
 
-ul{
+textarea {
+    width: 375px;
+    height: 250px;
+    background-color: lightyellow;
+}
+
+ul {
     padding: 0;
     margin: 0;
 }
+
 /* class selectors */
 
-.show li{
+/* RESPONSIVE NAVIGATION */
+
+.ham {
+    padding: 13px;
+    margin: 0;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li:first-child {
     display: block;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    /* color: #000; */
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #000;
+    background-color: rgb(139, 60, 158);
+    font-weight: 700;
+}
+
+.responsive li {
+    display: block;
+}
+
+.show li {
+    display: block;
+}
+#buttons{
+    /* padding: 100px; */
+    justify-content: center;
+    display: flex;
+    
+}
+
+#buttons button{
+    padding: 0.15rem;
+    margin: 1rem;
+    background-color: lightblue;
+}
+
+#name_input{
+    background-color: lightyellow;
 }
