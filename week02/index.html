@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/week1.css"/>
+    <link rel="stylesheet" href="styles/week2.css"/>
     <title>Week 2</title>
 </head>
 <body>
     <header><a href="../index.html">WDD 330: Web Frontend Development II</a></header>
     <nav>
-        <ul id="navigation" class="show" >
+        <ul id="navigation" class="hide" >
             <li id="menu"><a href="#">&equiv; Menu</a></li>
             <li><a href="../index.html">Home</a></li>
             <li><a href="/week01/">Week 1</a></li>
@@ -33,7 +33,36 @@
         <h1>Week 2</h1>        
         <section id="Notes">
             <h2>Notes</h2>
-            
+            <h3>Chapter 2 Notes</h3>
+            <ol>
+                <li>You can bind a value to a name by using the "let" keyword.</li>
+                <li>Values can be changed</li>
+                <li>Bindings are more like tentacles than boxes, they grasp values</li>
+                <li>Multiple bindings can be specified "Let one = 1, two = 2;"</li>
+                <li>"var" and "const" also allow a user to create a binding</li>
+                <li>The const keyword cannot be changed later. It is constant.</li>
+                <li>The names of bindings can include digits but cannot start with one.</li>
+                <li>The names of bindings can use '$' or '_' but no other special characters or punctuations.</li>
+                <li>Functions are programs wrapped in a value.</li>
+                <li>if/else statements allow for conditional execution/control flow</li>
+                <li>You can use 'while' and 'do while' loops to make code more efficient</li>
+                <li>For readability we indent segments of code that are part of a larger statement</li>
+                <li>'For while' loops can also be used.</li>               
+                <li>The 'break' and 'continue' keywords can be used to get out of a loop.</li>
+                <li>Switch/Case works in JS as well. Don't forget the 'break' and the 'default'</li>
+                <li>Good practice for naming bings is 'fuzzyLittleTurtle'</li>
+            </ol>
+
+            <h3>Chapter 3 Notes</h3>
+            <ol>
+                <li>'return' is a keyword that causes control to jump out of the current statement back to the code that called the function.</li>
+                <li>Parameters passed into the function behave like regular bindings but are given their values by the caller.</li>
+                <li>Bindings created inside functions can only be used in said functions. They have a scope of local.</li>
+                <li>For bindings created outside of any function the scope is the whole function. These are global bindings.</li>
+                <li>The 'var' keyword causes a binding to be accessible outside of its scope or block.</li>
+                <li></li>
+            </ol>
+
         </section>
 
         <section id="Questions">
@@ -43,14 +72,20 @@
 
         <section id="Examples">
             <h2>Example</h2>
+            <ul>
+                Examples Triangle Looping, FizzBuzz and Chessboard are in the console.
+            </ul>
 
         </section>
 
         <div id="teamActivity">
-            <a href="ta8.html">This Week's Team Activity</a>
+            <a href="/week02/teamActivity.html">This Week's Team Activity</a>
         </div>
 
     </main>
+    <script src="scripts/menuToggle.js"></script>
+    <script src="scripts/week2.js"></script>
+
     <footer>
         2020 | Aaron Hathaway | BYU - Idaho
     </footer>

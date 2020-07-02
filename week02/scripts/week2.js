@@ -1,83 +1,50 @@
+//Week 2 Notes 
+
+let x;
+
+console.log(x); //should be undefined
+
+//prompt("Enter passcode");
 
 
+//An example of a while loop
+// let result = 1;
+// let counter = 0;
+// while (counter < 69) {
+//   result = result * 2;
+//   counter = counter + 1;
+//   console.log(result);
+// }
 
-/* TeamActivity */
 
-function calculate(){
-    var input = document.getElementById("usrInput").value;
-    
-    if(!checkNum(input)){
-        return;
+//EXAMPLE 1 Looping a triangle
+let hash = '#';
+for(let i = 0; i < 7; i++){
+    console.log(hash)
+    hash += '#';
+}
+
+//EXAMPLE 2 FizzBuzz
+for(let i = 1; i <= 100; i++){
+    if((i % 3 == 0) && (i % 5 != 0))
+        console.log('Fizz');
+    else if((i % 5 == 0) && (i % 3 != 0))
+        console.log('Buzz');
+    else if((i % 3 == 0) && (i % 5 == 0))
+         console.log('FizzBuzz');
+    else console.log(i);
+} 
+
+//EXAMPLE 3 Chessboard
+let size = 8 ;
+let chessboard = '';
+for(let j = 0; j < size; j++){
+    for(i = 0; i < size; i++){
+        if((i + j) % 2 == 0)
+        chessboard += ' ';
+        else chessboard += '#';
     }
-
-    var output = addNumbers(input);
-
-    document.getElementById("output").innerHTML = output;
-
+    chessboard += '\n';
 }
+console.log(chessboard);
 
-function checkNum(number){
-    if(!isNaN(number)){
-        return true;
-    } else {
-        document.getElementById("output").innerHTML = "Make sure you type in a valid number!";
-        //alert("Make sure you type in a valid number!");
-        return false;
-    }
-}
-
-function addNumbers(number){
-    var sum = 0;
-    for(i=1; i<=number; i++){
-        sum += i;
-    }
-
-    return sum;
-}
-
-//This is our calculators controller
-function calc2Nums(type){
-    var num1 = document.getElementById("usrInput").value;
-    var num2 = document.getElementById("usrInput2").value;
-
-    if(!checkNum(num1) || !checkNum(num2)){
-        return;
-    }
-
-    var output = 0;
-    
-    switch(type){
-        case 'add':
-            output = addition(num1, num2);
-            break;
-        case 'sub':
-            output = subtract(num1, num2);
-            break;
-        case 'mult':
-            output = multiply(num1, num2);
-            break;
-        case 'div':
-            output = divide(num1, num2);
-            break;
-    }
-
-    document.getElementById("output").innerHTML = output;
-
-}
-
-function addition(num1, num2){
-    var sum = parseInt(num1) + parseInt(num2);
-    return sum;
-}
-function subtract(num1, num2){
-    var sum = parseInt(num1) - parseInt(num2);
-    return sum;
-}
-function multiply(num1, num2){
-    var sum = parseInt(num1) * parseInt(num2);
-    return sum;
-}
-function divide(num1, num2){
-    var sum = parseInt(num1) / parseInt(num2);
-    return sum;
-}
