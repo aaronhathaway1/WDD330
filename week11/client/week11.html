@@ -9,14 +9,22 @@
 
     <main>
         <h1>Auth Example App</h1>
-        <form action="">
+        <form id="login" action="">
             <label for="username">Username:</label>
-            <input type="text" name='username'>
+            <input id="username" type="text" name='username'>
             <br>
             <label for="password">Password:</label>
-            <input type="text" name='password'>
+            <input id="password" type="text" name='password'>
             <br>
-            <button type="submit">Submit</button>
+            <button type="button">Submit</button>
+        </form>
+
+        <ul id = "userPosts"></ul>
+
+        <form id="createPostForm" action="">
+            <input name="title" type="text"> 
+            <textarea name="postContent" id="createPost" cols="30" rows="10"></textarea>
+            <button id="sumbitPost" type="button">Submit</button>
         </form>
     </main>
 </body>
