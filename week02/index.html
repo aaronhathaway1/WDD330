@@ -32,7 +32,7 @@
     <main>
         <h1>Week 2</h1>        
         <section id="Notes">
-            <h2>Notes</h2>
+            <h2>Week 2 Notes</h2>
             <h3>Chapter 2 Notes</h3>
             <ol>
                 <li>You can bind a value to a name by using the "let" keyword.</li>
@@ -60,9 +60,20 @@
                 <li>Bindings created inside functions can only be used in said functions. They have a scope of local.</li>
                 <li>For bindings created outside of any function the scope is the whole function. These are global bindings.</li>
                 <li>The 'var' keyword causes a binding to be accessible outside of its scope or block.</li>
-                <li></li>
+                <li>Each scope can look out of its scope to access other bindings unless they share the same name</li>
+                <li>Context of scopes is kept track of by adding and removing from the stack</li>
+                <li>Referencing a specific instance of a local binding in an enclosing scope is called closure.</li>
+                <li>Recursion is using a function to call itself, similar to looping but less efficient</li>
+                <li>Pure functions have no side effects, typically the better form of functions</li>
             </ol>
 
+            <h3>Chapter 4 Notes</h3>
+            <ol>
+                <li>Arrays are data types that hold a sequence of values</li>
+                <li>You can use a '.' to access properties of JS values such as 'myString.length' to access the length property of myString</li>
+                <li>Another way to access properties of JS values is to use brackets after the value</li>
+                
+            </ol>
         </section>
 
         <section id="Questions">
@@ -71,23 +82,26 @@
         </section>
 
         <section id="Examples">
-            <h2>Example</h2>
+            <h2>Examples</h2>
             <ul>
                 Examples Triangle Looping, FizzBuzz and Chessboard are in the console.
             </ul>
-
+            <button class="button" onclick="determineEveness()">Click me to determine a number's evenness.</button>
+            <button class="button" onclick="countBs()">Counts the number of B's in a string</button>
+            <button class="button" onclick="countChar()">Count the specified character in a string</button>
         </section>
 
-        <div id="teamActivity">
-            <a href="/week02/teamActivity.html">This Week's Team Activity</a>
-        </div>
+        <section id="teamActivity">
+            <a id="teamActivityLink" href="/week02/teamActivity.html">This Week's Team Activity</a>
+        </section>
 
     </main>
-    <script src="scripts/menuToggle.js"></script>
-    <script src="scripts/week2.js"></script>
-
+    
     <footer>
         2020 | Aaron Hathaway | BYU - Idaho
     </footer>
+
+    <script src="scripts/menuToggle.js"></script>
+    <script src="scripts/week2.js"></script>
 </body>
 </html>

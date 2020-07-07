@@ -88,6 +88,10 @@ ul {
 
 /* class selectors */
 
+.button{
+    margin: 15px;
+}
+
 /* RESPONSIVE NAVIGATION */
 
 .ham {
@@ -128,11 +132,13 @@ ul {
 .show li {
     display: block;
 }
+
+/* ID Selectors */
+
 #buttons{
     /* padding: 100px; */
     justify-content: center;
-    display: flex;
-    
+    display: flex;  
 }
 
 #buttons button{
@@ -143,4 +149,12 @@ ul {
 
 #name_input{
     background-color: lightyellow;
+}
+
+#teamActivityLink{
+    color: blue;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.25rem;
+    border: 1px black solid;
 }

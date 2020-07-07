@@ -48,3 +48,73 @@ for(let j = 0; j < size; j++){
 }
 console.log(chessboard);
 
+// The following causes an error, "maximum call stack size exceeded"
+// function chicken() {
+//     return egg();
+//   }
+//   function egg() {
+//     return chicken();
+//   }
+//   console.log(chicken() + " came first.");
+
+//Making a math.min function
+// let a = prompt("Enter a number.");
+// let b = prompt("Enter another number.");
+// minimum(a, b);
+// function minimum(a, b) {
+//     if(a < b){
+//         console.log(a);
+//     }
+//     else console.log(b);
+// }
+
+//Making an isEven function
+
+// determineEveness(someNumber);
+function determineEveness(){
+    let someNumber = prompt("Enter a number whose even-ness you wish to determine");
+
+    function find(current){
+        current = Math.abs(current);
+        if (current == 0){
+            console.log('The number you entered is even.');
+            // console.log('Made it into the true evaluation');
+        } else if (current == 1){
+            console.log('The number you entered is odd');
+            // console.log('Made it into the false evaluation');
+        } else {
+            // console.log('Made it into the subtraction function');
+            return find(current - 2);
+        }
+    }
+    // console.log('Made it into the determine evenness function');
+    return find(someNumber);
+}
+
+function countBs(){
+    let words = prompt("Enter a string from which to count all the 'Bs'")
+    let counter = 0;
+    for ( let i = 0; i < words.length - 1 ; i++){
+        if( words.charAt(i) == 'B'){
+            counter++;
+        }
+    } 
+    console.log(counter);   
+}
+
+function countChar(){
+    let letter = prompt('Enter the character you wish to count');
+    let words = prompt("Enter a string from which to count the specified character");
+    let counter = 0;
+    for ( let i = 0; i < words.length - 1 ; i++){
+        if( words.charAt(i) == letter){
+            counter++;
+        }
+    } 
+    console.log(counter);   
+}
+
+
+
+
+
