@@ -1,0 +1,160 @@
+/* element selectors */
+
+a:visited {
+    color: black;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(255, 221, 30);
+    grid-row: -5 / -4;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(139, 60, 158);
+    border: 1px solid black;
+
+    padding: 15px;
+
+    grid-row: -2 / -1;
+}
+
+main {
+    margin: 5px;
+    grid-row: -3 / -2;
+}
+
+nav {
+    max-width: 100%;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    grid-row: -4 / -3;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li:first-child {
+    display: block;
+}
+
+nav ul li {
+    display: none;
+    text-align: center;
+
+}
+
+nav ul li a {
+    border: 1px solid black;
+    display: block;
+    background-color: rgb(139, 60, 158);
+    text-decoration: none;
+    height: 40px;
+    padding-top: 20px;
+    font-size: 1.2rem;
+}
+
+textarea {
+    width: 375px;
+    height: 250px;
+    background-color: lightyellow;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* class selectors */
+
+.button{
+    margin: 15px;
+}
+
+/* RESPONSIVE NAVIGATION */
+
+.ham {
+    padding: 13px;
+    margin: 0;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li:first-child {
+    display: block;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    /* color: #000; */
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #000;
+    background-color: rgb(139, 60, 158);
+    font-weight: 700;
+}
+
+.responsive li {
+    display: block;
+}
+
+.show li {
+    display: block;
+}
+
+/* ID Selectors */
+
+#buttons{
+    /* padding: 100px; */
+    justify-content: center;
+    display: flex;  
+}
+
+#buttons button{
+    padding: 0.15rem;
+    margin: 1rem;
+    background-color: lightblue;
+}
+
+#name_input{
+    background-color: lightyellow;
+}
+
+#teamActivityLink{
+    color: blue;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.25rem;
+    border: 1px black solid;
+}

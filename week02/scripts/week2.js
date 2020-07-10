@@ -1,5 +1,6 @@
 //Week 2 Notes 
 
+//CHAPTER 2 Notes
 let x;
 
 console.log(x); //should be undefined
@@ -47,6 +48,8 @@ for(let j = 0; j < size; j++){
     chessboard += '\n';
 }
 console.log(chessboard);
+
+//CHAPTER 3 Notes
 
 // The following causes an error, "maximum call stack size exceeded"
 // function chicken() {
@@ -115,6 +118,83 @@ function countChar(){
 }
 
 
+//CHAPTER 4 Notes
+
+//Me creating my first object in JS
+myObject = {
+    squirrel : false,
+    events: ["work", "touched tree", "pizza", "running"]
+};
+
+//Me checking that everything is accessible the way I think it is
+console.log(myObject);
+console.log(myObject.squirrel);
+console.log(myObject.events.length);
+
+//Me creating a function to execute a for loop to display the array in my object
+function displayMyObjects(){
+    for(let i = 0; i < myObject.events.length; i++){
+        console.log(myObject.events[i]);
+    };
+}
+//Calling aforementioned function
+displayMyObjects();
+
+//Finding out what properties my objecy has
+console.log(Object.keys(myObject));
+
+//Copying my object in your object
+let yourObject = {};
+Object.assign(yourObject, myObject);
+console.log(yourObject);
+
+//Mutability of Objects
+// const score = {visitors: 0, home: 0};
+// This is okay
+// score.visitors = 1;
+// This isn't allowed
+// score = {visitors: 1, home: 1};
+// console.log(Object.keys(Math));
 
 
 
+function countRange(){
+    let firstNum = prompt('Enter the first number of the array');
+    let lastNum = prompt('Enter the final letter of the array');
+    let myArray = [];
+    for(let i = firstNum; i <= lastNum; i++){
+        myArray.push(i);
+        console.log(i);
+    }
+}
+
+function sumRange(){
+    let firstNum = parseInt(prompt('Enter the first number of the array'));
+    let lastNum = parseInt(prompt('Enter the final letter of the array'));
+    let myArray = [];
+    let count = 0;
+    for(let i = firstNum; i <= lastNum; i++){
+        myArray.push(i);
+        count += i;
+        console.log(count);
+    }
+}
+
+//Haven't quite figured out how to reverse an array
+function reverseArray(){
+
+   let startingArray = prompt('Enter the array with a space between the numbers.').split(' ')
+   let newArray = [];
+    for (i = startingArray.length -1; i >= 0; i--){
+        newArray.push(startingArray[i]);
+    }
+    console.log(newArray);
+}
+
+function reverseArrayInPlace(){
+
+    let startingArray = prompt('Enter the array with a space between the numbers.').split(' ')
+    for(
+        
+    )
+}
