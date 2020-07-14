@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/week3.css"/>
+    <link rel="stylesheet" href="styles/week3.css" />
     <title>Week 3</title>
 </head>
+
 <body>
     <header><a href="../index.html">WDD 330: Web Frontend Development II</a></header>
     <nav>
-        <ul id="navigation" class="hide" >
+        <ul id="navigation" class="hide">
             <li id="menu"><a href="#">&equiv; Menu</a></li>
             <li><a href="../index.html">Home</a></li>
             <li><a href="/week01/">Week 1</a></li>
@@ -33,28 +35,82 @@
         <section>
             <h3>Chapter 6 Notes</h3>
             <ol>
-                <li></li>
+                <li>Large programs are often complex, causing programmers to be confused</li>
+                <li>Confused programmers introduce bugs that have plenty of space to hide in</li>
+                <li>Abstraction is talking about programs from a higher level, with out specifics</li>
+                <li>As programmers we might too often work too low on the abstraction ladder</li>
+                <li>We can use functions to do task repetively to save us time and complication</li>
+                <li>Functions that operate on other functions are called higher order functions</li>
+                <li>This allows us to abstract over actions</li>
+                <li>We can also use functions to change other functions</li>
+                <li>The ranges property conatins an arrat of Unicode characters, each is a two-element array</li>
+                <li>The map function takes an array, modifies each element and takes the new element and puts it into an
+                    array</li>
+                <li>The charCodeAt method gives us a code unit</li>
             </ol>
 
             <h3>Chapter 14 Notes</h3>
             <ol>
+                <li>DOM is short for Document Object Model</li>
+                <li>A data structure is called a tree when it has a branching structure, no cycles and a single defined
+                    root</li>
+                <li>Each DOM node object has a nodeType property</li>
+                <li>You can access and therefore alter elements in the document</li>
+                <li>There are many ways to access a node. Do not try to access by following the branches</li>
+                <li>Typically its better to access through an id, class or an object</li>
+                <li>There are many methods that allow for the changing of a node
+                    <ul>
+                        <li>remove</li>
+                        <li>appendChild</li>
+                        <li>insertBefore</li>
+                        <li>replaceChild</li>
+                    </ul>
+                </li>
+                <li>We create text nodes by "document.createTextNode"</li>
+                <li>document.createElement</li>
+                <li>Elements' attributes can be accessed through the DOM</li>
+                <li>They can also be accesss through "getAttribute" and "setAttribute</li>
+                <li>Some HTML elements take up the whole width of a page, these are called block elements</li>
+                <li>Paragraphs and headings fall into this category</li>
+                <li>Other elements are rendered on the same line. These are called in-line elements.</li>
+                <li>We can alter an element's style through JS as well.</li>
+                <li>CSS stands for Cascading Style Sheets</li>
+                <li>Typically the most recently applied rule is applies when there are contradicting rules</li>
                 <li></li>
             </ol>
 
             <h3>Chapter 15 Notes</h3>
             <ol>
-                <li></li>
+                <li>There are many ways to register user input</li>
+                <li>Actively monitor all input sources(keyboard, mouse, etc)</li>
+                <li>Set up a queue where those input can go and wait to be processed</li>
+                <li>Use an event handler</li>
+                <li>We can addEventListener</li>
+                <li>We can removeEventListener</li>
+                <li>Event handler functions are passed an argument: the event object</li>
+                <li>Events propagate outwards if there are handlers on both a parent and child node</li>
+                <li>We can stop propagation with event.stopPropagation();</li>
+                <li>JavaScript event handlers are called before default behaviors, typically</li>
+                <li>We can prevent deafult behaviors by using event.preventDefault();</li>
+                <li>Keys fire a keydown when pressed and a key up event when released</li>
+                <li>There are two ways to point at stuff on screen, using a mouse or a touchscreen</li>
+                <li>We can also use scroll events</li>
+                <li>The focus and blur events do not propogate</li>
+                <li>When a page finishes loading, a load event is fired</li>
+                <li>We should use web workers that runs alognside the main script to do intensive, time consuming tasks</li>
             </ol>
         </section>
 
         <section>
             <h3>Questions</h3>
-            
+
         </section>
 
         <section>
             <h3>Examples</h3>
-
+            <p>Click this document to activate the handler.</p>
+            <button>Click me</button>
+            <p>No handler here.</p>
         </section>
 
         <section id="teamActivity">
@@ -70,4 +126,5 @@
     <script src="scripts/menuToggle.js"></script>
     <script src="scripts/week3.js"></script>
 </body>
+
 </html>
