@@ -31,19 +31,59 @@
     <main>
         <h2>Week 4 Notes</h2>
         <section>
-            <h3>Chapter 6 Notes</h3>
+            <h3>Chapter 18 "HTTP and Forms" Notes</h3>
             <ol>
-                <li></li>
+                <li>HTTP(Hypertext Transfer Protocol") is the mechanism we use to request and provide data on the World Wide Web</li>
+                <li>Common methods used in specifying resources are GET, DELETE, PUT, and POST</li>
+                <li>Forms are how the user communicates with the website</li>
+                <li>JS can make HTTP requests with fetch</li>
+                <li>Calling fetch returns a promise</li>
+                <li>This promise resolves to a Response object</li>
+                <li>We use secure HTTP protocol for things that must remain secret or unmodified</li>
+                <li>This looks like "https://"</li>
+                <li>These are some common input tags
+                    <ul>
+                        <li>text - a single line of text</li>
+                        <li>password - same as text but hides the text that is typed</li>
+                        <li>checkbox - an on/off switch</li>
+                        <li>radio - (Part of) a multiple choice field</li>
+                        <li>file - allows the user to choose a file from their computer</li>
+                    </ul>
+                </li>
+                <li>Form fields can get keyboard focus</li>
+                <li>This means you must enter them by clicking in order for them to recieve input</li>
+                <li>Form fields can be disabled as an attribute</li>
+                <li>A form with a button with a type = "submit" will cause the form to be submitted when the button is pressed</li>
+                <li>We can take information from forms and store it in localStorage</li>
             </ol>
 
-            <h3>Chapter 14 Notes</h3>
+            <h3>Chapter 6 "The Secret Life of Objects" Notes</h3>
             <ol>
-                <li></li>
+                <li>Object-Oriented programming is concerned with breaking large programs down into more manageable parts</li>
+                <li>This concept is more accurately depicted as encapsulation</li>
+                <li>We interface with objects through their methods and their properties</li>
+                <li>Properties of the objects are public and private</li>
+                <li>Methods are properties that hold function values</li>
+                <li>A prototype is an object that is used as a fallback source of properties</li>
+                <li>This is akin to oop's classes.</li>
+                <li>This is called an instance in js</li>
+                <li>We use a constructor function to make sure our instances have the correct properties</li>
+                <li>Put the keyword 'new' in front of a function call to signify it as a constuctor</li>
+                <li>A 'map' is a data structure that associates values(the keys) with other values.</li>
             </ol>
 
-            <h3>Chapter 15 Notes</h3>
+            <h3>Chapter 10 "Modules" Notes</h3>
             <ol>
-                <li></li>
+                <li>Modules are an attempt to specify which other pieces it relieas on</li>
+                <li>The relations between modules are called dependecies</li>
+                <li>It is a way of isolating code instead of it all being one big conglomerated file</li>
+                <li>A package is a chunk of code that can distributed</li>
+                <li>Packages normally come with documentation</li>
+                <li>Some infrastructure is required for packages to be used, updated, etc</li>
+                <li>This infrastructure is NPM</li>
+                <li>NPM is an online repository of packages and a program that helps you download and install packages</li>
+                <li>NPM combined with CommonJS modules was a good way for JS programmers to share good but we deserve better</li>
+                <li>In 2015, ECMAScript was introduced to JS as the new module system</li>
             </ol>
         </section>
 
@@ -67,5 +107,6 @@
     </footer>
 
     <script src="scripts/menuToggle.js"></script>
+    <script src="scripts/week4.js"></script>
 </body>
 </html>
