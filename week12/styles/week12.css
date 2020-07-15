@@ -93,6 +93,9 @@ ul {
 }
 
 /* RESPONSIVE NAVIGATION */
+.active{
+    background-color: rgb(220, 95, 251);
+}
 
 .ham {
     padding: 13px;
