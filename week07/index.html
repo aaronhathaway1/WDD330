@@ -33,6 +33,23 @@
         <section>
             <h3>Chapter 11 Asynchronous Programming Notes</h3>
             <ol>
+                <li>Synchronous programming is when things happen one at a time.</li>
+                <li>Asynchronous programming is when multiple things happen at the same time.</li>
+                <li>One way of making synchronous programming faster it to start another thread of control</li>
+                <li>Callback functions are used to implement asynchronous programming</li>
+                <li>A promise is an asynchronous action that may complete at some point and produce a value</li>
+                <li>We can us the "then" method to get the result of a promise</li>
+                <li>To create a promise, you can use "Promise" as a constructor</li>
+                <li>When working with networks, its a good idea to make our request function retry automatically before giving up</li>
+                <li>Generally, it is a good idea to include a promise in our function</li>
+                <li>Network flooding is the idea of sending messages thorughout the entire network</li>
+                <li>This is done by one node receiving the message and sending it to its neighbors except the one who sent the orginal message</li>
+                <li>This concept allows for messages to reach their destination even if the most immediate path is blocked</li>
+                <li>Message routing is the idea of sending a message along the most direct route in order to cut down on useless data transfers</li>
+                <li>A list of of the nests and their immediate neighbotrs is needed.</li>
+                <li>This list is created and maintained by network flooding</li>
+                <li>Generator functions can be paused and then resumed. They are similar to async functions but have no promises</li>
+                <li>A function becomes a generator function by using this syntax when creating the function: function* </li>
                 <li></li>
             </ol>
         </section>
