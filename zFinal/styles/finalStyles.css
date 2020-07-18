@@ -1,10 +1,12 @@
+
+
 /* element selectors */
 
-aside{
+aside {
     /*Color Pallete*/
     Primary: #235789;
     Secondary: #C1292E;
-    Accent1:  #F0EC57;
+    Accent1: #F0EC57;
     Accent2: #748067;
     Other: #0B0A07;
 }
@@ -13,9 +15,25 @@ a:visited {
     color: black;
 }
 
-a{
-    color:black;
+a {
+    color: black;
     text-decoration: none;
+}
+
+button{
+    height: 44px;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
 }
 
 header {
@@ -27,14 +45,17 @@ header {
 
 html {
     width: 100%;
+    height: 100%;
+
 }
 
 body {
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: auto 1fr auto;
 }
 
 footer {
@@ -42,14 +63,15 @@ footer {
     background-color: rgb(139, 60, 158);
     border: 1px solid black;
 
-    padding: 15px;
-
     grid-row: -2 / -1;
 }
 
 main {
     margin: 5px;
     grid-row: -3 / -2;
+
+    margin: auto;
+
 }
 
 nav {
@@ -93,11 +115,13 @@ textarea {
 ul {
     padding: 0;
     margin: 0;
+    list-style-type: none;
+    text-align: center;
 }
 
 /* class selectors */
 
-.button{
+.button {
     margin: 15px;
 }
 
@@ -144,23 +168,28 @@ ul {
 
 /* ID Selectors */
 
-#buttons{
+#buttons {
     /* padding: 100px; */
     justify-content: center;
-    display: flex;  
+    display: flex;
 }
 
-#buttons button{
+#buttons button {
     padding: 0.15rem;
     margin: 1rem;
     background-color: lightblue;
 }
 
-#name_input{
+#cards ul li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#name_input {
     background-color: lightyellow;
 }
 
-#teamActivityLink{
+#teamActivityLink {
     color: blue;
     padding: 5px;
     margin: 5px;
