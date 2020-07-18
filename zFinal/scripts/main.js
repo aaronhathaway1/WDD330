@@ -112,6 +112,7 @@ function buildCards(event) {
     btn.dataset.id = colID;
     btn.addEventListener("click", createCard);
     document.getElementById("cards").appendChild(btn);
+    addDeleteBtnEventListeners();
 }
 
 function createCard(event) {
@@ -141,14 +142,41 @@ function createCard(event) {
     btn.addEventListener("click", createCard);
     document.getElementById("cards").appendChild(btn);
 
-
+    addDeleteBtnEventListeners();
 }
 
 function addDeleteBtnEventListeners() {
     let delBtns = document.querySelectorAll('.delBtn');
     delBtns.forEach(element => {
         element.addEventListener("click", () => {
-//delete card functions
+            let cardID = event.target.dataset.id;
+            let colID = event.target.dataset.colid;
+
+            console.log("The event listener has been triggered");
+             //finds index(collection) in library
+            let index = library.findIndex(collection => collection.id == colID); //findIndex is essentially a forEach that returns an index
+            console.log(cardID);
+            console.log(library[index].cards.findIndex(card => card.id == cardID));
+            library[index].removeCard(cardID);
+
+            // let cardIndex = library[index].cards.findIndex(card => card.id == cardID);
+            // library[index].cards.splice(cardIndex, 1);
+
+            localStorage.setItem("library", JSON.stringify(library));
+            buildLibraryList();
+
+           
+            console.log(library[index]);
+            let ul = library[index].buildCollectionList(); //Builds individual cards
+            document.getElementById("cards").innerHTML = '';
+            document.getElementById("cards").appendChild(ul);
+
+            let btn = document.createElement('button');
+            btn.textContent = "Add a card";
+            btn.dataset.id = colID;
+            btn.addEventListener("click", createCard);
+            document.getElementById("cards").appendChild(btn);
+            addDeleteBtnEventListeners();
         })
     });
 }

@@ -41,7 +41,8 @@ export default class Collection {
      * 
      *******************************************************************************************/
     removeCard(id) {
-        let index = this.cards.findIndex(card => card.id === id);
+        let index = this.cards.findIndex(card => card.id == id);
+        console.log(index);
         this.cards.splice(index, 1);
     }
 
@@ -55,15 +56,15 @@ export default class Collection {
             let card = document.createElement('li')
             let side1 = document.createElement('div');
             let side2 = document.createElement('div');
-            let delBtn = document.createElement('btn');
+            let delBtn = document.createElement('button');
 
             side1.textContent = this.cards[i].side1;
             side2.textContent = this.cards[i].side2;
 
             delBtn.textContent = 'X';
-            delBtn.dataset.id = this.cards[i].id;
-            delBtn.dataset.colID = this.id;
-            delBtn.classList.add('delBtn');
+            delBtn.dataset.id = this.cards[i].id;    //this saves the card id to the button when created
+            delBtn.dataset.colid = this.id;          //this saves the collection id to the button too
+            delBtn.classList.add('delBtn');          //this adds a 'delBtn' class to the button 
 
             card.appendChild(side1);
             card.appendChild(side2);
