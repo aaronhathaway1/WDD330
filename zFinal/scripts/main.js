@@ -39,6 +39,7 @@ function buildLibraryList() {
 let createCollectionButton = document.getElementById("createCollection");
 let removeCollectionButton = document.getElementById("removeCollection");
 
+
 /*******************************************************************************************
  * Creating, removing, reviewing and displaying individual collections
  * 
@@ -47,7 +48,7 @@ let removeCollectionButton = document.getElementById("removeCollection");
 /*Writing the functions that creates the new collections*/
 createCollectionButton.addEventListener("click", () => {
     let collectionName = prompt("What do you want to name your new collection?");
-    if(collectionName == ""){
+    if (collectionName == "") {
         alert("You must enter a collection name.");
         return;
     }
@@ -59,11 +60,11 @@ createCollectionButton.addEventListener("click", () => {
 })
 
 removeCollectionButton.addEventListener("click", () => {
-    
+
     let collectionName = prompt("Which collection do you want to remove?");
     let colID;
     library.forEach(element => {
-        if (element.name == collectionName){
+        if (element.name == collectionName) {
             colID = element.id;
         }
     });
@@ -75,9 +76,9 @@ removeCollectionButton.addEventListener("click", () => {
     localStorage.setItem("library", JSON.stringify(library));
     buildLibraryList();
 
-} )
+})
 
-function reviewCollection(){
+function reviewCollection() {
 
 }
 
@@ -97,12 +98,12 @@ function reviewCollection(){
 function buildCards(event) {
     console.log("The event has been triggered.");
     let colID = event.target.dataset.id;
-   
+
     //find index in library
     let index = library.findIndex(collection => collection.id == colID);
 
     console.log(library[index]);
-    let ul = library[index].buildCollectionList();
+    let ul = library[index].buildCollectionList(); //Builds individual cards
     document.getElementById("cards").innerHTML = '';
     document.getElementById("cards").appendChild(ul);
 
@@ -115,27 +116,44 @@ function buildCards(event) {
 
 function createCard(event) {
     let colID = event.target.dataset.id;
-    let side1 = prompt("Please enter side 1 of your card."); 
-    let side2 = prompt("Please enter side 2 of your card."); 
+    let side1 = prompt("Please enter side 1 of your card.");
+    if (side1 == "") {
+        alert("You must enter a word or phrase.");
+        return;
+    }
+    let side2 = prompt("Please enter side 2 of your card.");
+    if (side1 == "") {
+        alert("You must enter a word or phrase.");
+        return;
+    }
     let index = library.findIndex(collection => collection.id == colID);
 
-    library[index].createCard(side1, side2);                    
+    library[index].createCard(side1, side2);
     localStorage.setItem("library", JSON.stringify(library));
 
+    let ul = library[index].buildCollectionList(); //Builds individual cards
+    document.getElementById("cards").innerHTML = '';
+    document.getElementById("cards").appendChild(ul);
+
+    let btn = document.createElement('button');
+    btn.textContent = "Add a card";
+    btn.dataset.id = colID;
+    btn.addEventListener("click", createCard);
+    document.getElementById("cards").appendChild(btn);
+
+
+}
+
+function addDeleteBtnEventListeners() {
+    let delBtns = document.querySelectorAll('.delBtn');
+    delBtns.forEach(element => {
+        element.addEventListener("click", () => {
+//delete card functions
+        })
+    });
 }
 
 /*******************************************************************************************
  * 
  * 
  *******************************************************************************************/
-
-
-
-
-
-
-
-
- 
-
- 

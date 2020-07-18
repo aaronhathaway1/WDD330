@@ -46,7 +46,7 @@ export default class Collection {
     }
 
     /*******************************************************************************************
-     * 
+     * Creates and inserts HTML into the code based on what target(collectionID) event was click
      * 
      *******************************************************************************************/
     buildCollectionList() {
@@ -55,12 +55,19 @@ export default class Collection {
             let card = document.createElement('li')
             let side1 = document.createElement('div');
             let side2 = document.createElement('div');
+            let delBtn = document.createElement('btn');
 
             side1.textContent = this.cards[i].side1;
             side2.textContent = this.cards[i].side2;
 
+            delBtn.textContent = 'X';
+            delBtn.dataset.id = this.cards[i].id;
+            delBtn.dataset.colID = this.id;
+            delBtn.classList.add('delBtn');
+
             card.appendChild(side1);
             card.appendChild(side2);
+            card.appendChild(delBtn);
 
             document.getElementById('cards').appendChild(card);
             allCards.appendChild(card);
