@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 
 /* element selectors */
 
@@ -22,10 +22,10 @@ a {
 
 button{
     height: 44px;
+    width: 150px;
     display: block;
     margin: auto;
-    margin-top: 5px;
-    
+    margin-top: 25px;
 
 }
 
@@ -56,6 +56,7 @@ body {
     padding: 0;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 footer {
@@ -71,7 +72,8 @@ main {
     grid-row: -3 / -2;
 
     margin: auto;
-
+    width: 100vw;
+    font-size: 1 rem
 }
 
 nav {
@@ -106,6 +108,11 @@ nav ul li a {
     font-size: 1.2rem;
 }
 
+section{
+    border: 1px solid black;
+    padding: 15px;
+}
+
 textarea {
     width: 375px;
     height: 250px;
@@ -125,6 +132,11 @@ ul {
     margin: 15px;
 }
 
+.delBtn{
+    background-color: lightcoral;
+    width: 35px;
+    margin: auto;
+}
 /* RESPONSIVE NAVIGATION */
 
 .ham {
@@ -170,8 +182,8 @@ ul {
 
 #buttons {
     /* padding: 100px; */
-    justify-content: center;
-    display: flex;
+    /* justify-content: center;
+    display: flex; */
 }
 
 #buttons button {
@@ -180,19 +192,26 @@ ul {
     background-color: lightblue;
 }
 
+/* Vocab cards themselves */
 #cards ul li {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 2.5px;
+    
+}
+#library li{
+    border: 1px solid black;
+    width: 150px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: lightblue;
+
+
 }
 
 #name_input {
     background-color: lightyellow;
 }
 
-#teamActivityLink {
-    color: blue;
-    padding: 5px;
-    margin: 5px;
-    font-size: 1.25rem;
-    border: 1px black solid;
-}
