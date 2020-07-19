@@ -30,7 +30,7 @@ function buildLibraryList() {
         let collectionName = document.createElement('li');
         collectionName.textContent = element.name;
         collectionName.dataset.id = element.id;
-        collectionName.classList.add(element.id);
+        collectionName.classList.add("collectionLi");
         collections.appendChild(collectionName);
         collectionName.addEventListener("click", buildCards);
         // console.log("this is the event I'm looking for");
@@ -85,10 +85,6 @@ function reviewCollection() {
 }
 
 
-
-
-
-
 /*******************************************************************************************
  * Creating, deleting, and displaying individual cards
  * 
@@ -115,57 +111,24 @@ function buildCards(event) {
     document.getElementById("cards").appendChild(btn);
     addDeleteBtnEventListeners();
 
-
-    // document.getElementById("library").for (let index = 0; index < array.length; index++) {
-    //     const element = array[index];
-    //     if(element.id != colID){
-        
-    //     console.log(element);
-    //     console.log("tried to add the hidden class");
-    //     }
-
-    // switch (colID) {
-    //     case 1595115612941:
-            
-    //         break;
-    
-    //     default:
-    //         break;
-    // } 
-    // console.log(colID)
-    // console.log(colName);
-    // let listItem = document.getElementsByClassName(colID);
-    // console.log(listItem[0].outerHTML);
-
-
-    // document.getElementById("library").children for each 
+    hideOtherCollections(colID);
+    buildBackBtn();
 
 }
 
-
-// function displayCollection(){
-//     click button 
-//     forEach(
-//         if ( target.id == i){
-//             let collections = document.getElementById("library")
-//     collections.innerHTML = '';
-//     library.forEach(element => {
-//         let collectionName = document.createElement('li');
-//         collectionName.textContent = element.name;
-//         collectionName.dataset.id = element.id;
-//         collectionName.classList.add(element.id);
-//         collections.appendChild(collectionName);
-//         collectionName.addEventListener("click", buildCards);
-//         // console.log("this is the event I'm looking for");
-//     })
-//         else return;  
-//     }
-//     )
     
 
+function hideOtherCollections(selectedCollectionId){
+    document.querySelectorAll(".collectionLi").forEach(element => {
+        if(element.dataset.id != selectedCollectionId){
+            element.classList.add("hidden");
+        } else {
+            element.classList.remove("hidden");
+        }
+    });
+}
 
-
-
+buildBackBtn()
 
 
 function createCard(event) {
