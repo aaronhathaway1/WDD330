@@ -220,6 +220,7 @@ ul {
 
 #cards button{
     background-color: lightgreen;
+    font-size: 1.10rem;
 }
 
 #cards ul li button{
