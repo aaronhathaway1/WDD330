@@ -2,14 +2,14 @@
 
 /* element selectors */
 
-aside {
-    /*Color Pallete*/
+/* aside {
+    Color Pallete
     Primary: #235789;
     Secondary: #C1292E;
     Accent1: #F0EC57;
     Accent2: #748067;
     Other: #0B0A07;
-}
+} */
 
 a:visited {
     color: black;
