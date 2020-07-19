@@ -31,17 +31,38 @@
     <main>
         <h2>Week 9 Notes</h2>
         <section>
-            <h3>Chapter 6 Notes</h3>
+            <h3>Chapter 9 The Window Object Notes</h3>
             <ol>
-                <li></li>
+                <li>The Browser Object Model(BOM) is a collection of properties and methods that contain info about the browser and screen</li>
+                <li>These properties and methods are available through the window object</li>
+                <li>Global variables are created with const, let or var</li>
+                <li>These variables can be accessed in all parts of the program</li>
+                <li>Global variables are properties of the global object</li>
+                <li>Other examples of methods of the global object are parseInt() and isNaN()</li>
+                <li>However, ES6 made those methods part of the Number object</li>
+                <li>alert(), confirm() and propmt() are also methods of the window object</li>
+                <li>These pop up windows should not be relied upon as they can be disabled by the user</li>
+                <li>The window object has a navigator property that returns a reference to the navigator object</li>
+                <li>The window.location property is an object that contains information about the url of the current page</li>
+                <li>The window.history property shows information about previously visited pages</li>
+                <li>The window.history.forward() and window.history.back() are used to move the page forward and backward, respectively</li>
+                <li>A new window can be opened using window.open()</li>
+                <li>The close() method can close a window</li>
+                <li>The window.screen object has info on the screen the browser is displayed on</li>
+                <li>Each window object also contains a document object</li>
+                <li>Cookies are small files saved locally on a user computer</li>
+                <li>Cookies take the form of a text file that contains name/value pairs separated by semicolons</li>
+                <li>This is an example of a cookies file: "name=Superman; hero=true; city=Metropolis"</li>
+                <li>To create a cookie, you assign it to JS's cookie jar, using the document.cookie property</li>
+                <li>document.cookie = 'name=Superman';</li>
+                <li>Assigning more values to document.cookie appends them to the original info</li>
+                <li>A cookie's value can be reassigned by using the same name but a different value</li>
+                <li>We can access the contents of the cookie jar by using the split() method to use a for of loop</li>
+                <li>To remove a cookie, set it to expire:"document.cookie = 'name=Batman; expires=Thu, 01 Jan 1970"</li>
+                <li>Consider using CSS to animate</li>
             </ol>
 
-            <h3>Chapter 14 Notes</h3>
-            <ol>
-                <li></li>
-            </ol>
-
-            <h3>Chapter 15 Notes</h3>
+            <h3>Chapter 14 HTML5's APIs Notes</h3>
             <ol>
                 <li></li>
             </ol>

@@ -30,8 +30,10 @@ function buildLibraryList() {
         let collectionName = document.createElement('li');
         collectionName.textContent = element.name;
         collectionName.dataset.id = element.id;
+        collectionName.classList.add(element.id);
         collections.appendChild(collectionName);
         collectionName.addEventListener("click", buildCards);
+        // console.log("this is the event I'm looking for");
     });
 }
 
@@ -91,13 +93,11 @@ function reviewCollection() {
  * Creating, deleting, and displaying individual cards
  * 
  *******************************************************************************************/
-
-/*HAVEN'T FINISHED!! Writitng the function that displays cards from a library
-  need to finish create card function
-*/
+/*Takes the data from localStorage and creates the cards from it*/
 function buildCards(event) {
-    console.log("The event has been triggered.");
+    // console.log("The event has been triggered.");
     let colID = event.target.dataset.id;
+    let colName = event.target.dataset.name;
 
     //find index in library
     let index = library.findIndex(collection => collection.id == colID);
@@ -110,10 +110,63 @@ function buildCards(event) {
     let btn = document.createElement('button');
     btn.textContent = "Add a card";
     btn.dataset.id = colID;
+    btn.dataset.name = colName;
     btn.addEventListener("click", createCard);
     document.getElementById("cards").appendChild(btn);
     addDeleteBtnEventListeners();
+
+
+    // document.getElementById("library").for (let index = 0; index < array.length; index++) {
+    //     const element = array[index];
+    //     if(element.id != colID){
+        
+    //     console.log(element);
+    //     console.log("tried to add the hidden class");
+    //     }
+
+    // switch (colID) {
+    //     case 1595115612941:
+            
+    //         break;
+    
+    //     default:
+    //         break;
+    // } 
+    // console.log(colID)
+    // console.log(colName);
+    // let listItem = document.getElementsByClassName(colID);
+    // console.log(listItem[0].outerHTML);
+
+
+    // document.getElementById("library").children for each 
+
 }
+
+
+// function displayCollection(){
+//     click button 
+//     forEach(
+//         if ( target.id == i){
+//             let collections = document.getElementById("library")
+//     collections.innerHTML = '';
+//     library.forEach(element => {
+//         let collectionName = document.createElement('li');
+//         collectionName.textContent = element.name;
+//         collectionName.dataset.id = element.id;
+//         collectionName.classList.add(element.id);
+//         collections.appendChild(collectionName);
+//         collectionName.addEventListener("click", buildCards);
+//         // console.log("this is the event I'm looking for");
+//     })
+//         else return;  
+//     }
+//     )
+    
+
+
+
+
+
 
 function createCard(event) {
     let colID = event.target.dataset.id;

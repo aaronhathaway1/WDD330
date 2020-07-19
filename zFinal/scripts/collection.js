@@ -75,6 +75,7 @@ export default class Collection {
         }
         return allCards;
     }
+
 }
 
 

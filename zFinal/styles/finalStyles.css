@@ -137,6 +137,14 @@ ul {
     width: 35px;
     margin: auto;
 }
+
+/* .linkBtn{
+    background-color: lightcoral;
+    width: 35px;
+    margin: 5px;
+    border: 1px solid black;
+} */
+
 /* RESPONSIVE NAVIGATION */
 
 .ham {
@@ -178,13 +186,11 @@ ul {
     display: block;
 }
 
-/* ID Selectors */
-
-#buttons {
-    /* padding: 100px; */
-    /* justify-content: center;
-    display: flex; */
+.hidden{
+    display: none;
 }
+
+/* ID Selectors */
 
 #buttons button {
     padding: 0.15rem;
@@ -199,6 +205,27 @@ ul {
     padding: 2.5px;
     
 }
+
+/* BUTTONS FOR CREATING AND REMOVING COLLECTIONS */
+
+#createCollection button{
+    background-color: lightgreen;
+    font-size: 1.10rem;
+}
+#removeCollection button{
+    background-color: lightcoral;
+    font-size: 1.10rem;
+
+}
+
+#cards button{
+    background-color: lightgreen;
+}
+
+#cards ul li button{
+    background-color: lightcoral;
+}
+
 #library li{
     border: 1px solid black;
     width: 150px;
@@ -214,4 +241,6 @@ ul {
 #name_input {
     background-color: lightyellow;
 }
+
+
 
